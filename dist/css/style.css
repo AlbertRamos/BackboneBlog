@@ -1,0 +1,67 @@
+/*
+|---------
+| Topbar
+|---------
+*/
+.navbar-default {
+    background: none !important;
+}
+.navbar-default .navbar-brand {
+    color: #F9F9F9;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #CACACA;
+}
+
+/*
+|---------
+| Header
+|---------
+*/
+header.intro-header {
+    background-image: url('/dist/img/pug_header.jpg');
+}
+.site-heading h1 {
+    background: rgba(255,255,255,.15);
+    margin: 0;
+    display: inline-block;
+    padding: 25px 80px;
+}
+
+
+/*
+|---------
+| Home
+|---------
+*/
+.post-preview h2.post-title a {
+    text-decoration: none;
+}
+.post-preview .post-subtitle {
+    margin: 20px 0 !important;
+}
+
+/*
+|---------
+| Single post
+|---------
+*/
+div#post_info {
+    font-family: 'Courier';
+    padding: 20px 0;
+}
+
+span.date {
+    font-size: 15px;
+    border-bottom: 1px solid;
+}
+div#content p:first-child {
+    margin-top: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar-default {
+        border: 0;
+    }
+}
