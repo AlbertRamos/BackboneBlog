@@ -30,7 +30,8 @@ define(function (require) {
         },
 
         success: function( posts ){
-            var postList = new PostsList({ collection: posts });
+            var postsCollection = new PostsCollection(posts.models[0].get('data'));
+            var postList = new PostsList({ collection: postsCollection });
             var headerView = new HeaderView();
 
 
