@@ -11,6 +11,7 @@ define(function (require) {
      * Models & collections
      * @type {exports}
      */
+    var PostModel = require('app/Models/Post/Post');
     var PostsCollection = require('app/Collections/Post/PostsCollection');
 
     /**
@@ -19,6 +20,7 @@ define(function (require) {
      */
     var HeaderView = require('app/Views/Header');
     var PostsList = require('app/Modules/Home/Views/PostsList');
+    var LoadPosts = require('app/Modules/Home/Views/LoadPosts');
 
     var HomeController = Marionette.Object.extend({
         initialize: function(){
@@ -30,13 +32,15 @@ define(function (require) {
         },
 
         success: function( posts ){
-            var postsCollection = new PostsCollection(posts.models[0].get('data'));
+            var postsCollection = new PostsCollection(posts.get('data'));
             var postList = new PostsList({ collection: postsCollection });
+            var loadPosts = new LoadPosts({ collection: postsCollection, model: posts });
             var headerView = new HeaderView();
 
 
             this.layout.header.show(headerView);
             this.layout.main.show(postList);
+            this.layout.footer.show(loadPosts);
 
         },
 
@@ -45,7 +49,8 @@ define(function (require) {
             var self = this;
             this.layout = new LayoutView();
 
-            var posts = new PostsCollection();
+            //var posts = new PostsCollection();
+            var posts = new PostModel();
 
             posts
                 .fetch()

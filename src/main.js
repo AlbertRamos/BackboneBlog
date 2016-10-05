@@ -11,7 +11,8 @@ requirejs.config({
         underscore: 'underscore.min',
         backbone: 'backbone.min',
         marionette: 'marionette.min',
-        bootstrap: 'bootstrap'
+        bootstrap: 'bootstrap',
+        text: 'text'
     },
 
     shim: {
