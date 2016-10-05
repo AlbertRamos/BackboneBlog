@@ -5,7 +5,7 @@ define(function (require) {
 
     return Marionette.ItemView.extend({
         template: Template,
-        className: 'post-preview'
+        className: 'no_more_posts'
     });
 
 });
