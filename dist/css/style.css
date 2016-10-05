@@ -28,6 +28,14 @@ header.intro-header {
     padding: 25px 80px;
 }
 
+/*
+|---------
+| Footer
+|---------
+*/
+div#app_footer {
+    padding: 20px 0 60px;
+}
 
 /*
 |---------
@@ -40,6 +48,12 @@ header.intro-header {
 .post-preview .post-subtitle {
     margin: 20px 0 !important;
 }
+
+.load_more_container .btn {
+    width: 100%;
+    outline: none;
+}
+
 
 /*
 |---------
