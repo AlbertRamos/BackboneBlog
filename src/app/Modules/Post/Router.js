@@ -3,7 +3,7 @@ define(function (require) {
 
     var Router = Marionette.AppRouter.extend({
         appRoutes: {
-            'post/:1': 'show'
+            'post/:id': 'show'
         }
     });
 
