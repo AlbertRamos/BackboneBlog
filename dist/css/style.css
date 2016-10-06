@@ -58,6 +58,9 @@ header.intro-header {
 .post-preview {
   padding-bottom: 24px;
 }
+.post-preview p{
+    margin:0 !important;
+}
 .post-meta {
   font-size: 14px !important;
   padding:16px 0 0 !important;
@@ -81,6 +84,10 @@ span.date {
 }
 div#content p:first-child {
     margin-top: 0;
+}
+
+pre {
+font-size: 9pt !important;
 }
 
 
