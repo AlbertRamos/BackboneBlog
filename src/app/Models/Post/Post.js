@@ -1,9 +1,9 @@
 define(function (require) {
-
     var Backbone = require('backbone');
+    var Config = require('config');
 
     var Post = Backbone.Model.extend({
-        urlRoot: 'http://api.blogjs.io/posts'
+        urlRoot: Config.getApiUrl('/posts')
     });
 
     return Post;
