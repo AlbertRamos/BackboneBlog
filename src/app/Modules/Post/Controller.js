@@ -32,6 +32,17 @@ define(function (require) {
         },
 
         success: function( posts ){
+            /**
+             * DefaultLayout
+             * @type {LayoutView}
+             */
+            this.layout = new LayoutView();
+            this.layout.render();
+
+            /**
+             * Views
+             * @type {HeaderView}
+             */
             var headerView = new HeaderView({ model: this.post });
             var postInfoView = new PostInfoView({ model: this.post });
             var postContentView = new PostContentView({ model: this.post });
