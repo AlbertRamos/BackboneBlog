@@ -19,6 +19,7 @@ define(function (require) {
      * @type {exports}
      */
     var HeaderView = require('app/Views/Header');
+    var HomeLayoutView = require('app/Modules/Home/Views/HomeLayout');
     var PostsList = require('app/Modules/Home/Views/PostsList');
     var LoadPosts = require('app/Modules/Home/Views/LoadPosts');
 
@@ -28,30 +29,39 @@ define(function (require) {
             this.router = new Router({
                 controller: this
             });
-            this.show();
+
         },
 
         success: function( posts ){
+            /**
+             * Layouts
+             *
+             */
+            this.layout = new LayoutView();
+            this.layout.render();
+            this.homeLayout = new HomeLayoutView();
+            this.homeLayout.render();
+
+            /**
+             * Collections & views
+             *
+             */
             var postsCollection = new PostsCollection(posts.get('data'));
             var postList = new PostsList({ collection: postsCollection });
             var loadPosts = new LoadPosts({ collection: postsCollection, model: posts });
             var headerView = new HeaderView();
 
 
-            this.layout.header.show(headerView);
-            this.layout.main.show(postList);
-            this.layout.footer.show(loadPosts);
 
+            this.homeLayout.header.show(headerView);
+            this.homeLayout.main.show(postList);
+            this.homeLayout.footer.show(loadPosts);
         },
 
         show: function(){
-            console.log("lalla");
             var self = this;
-            this.layout = new LayoutView();
 
-            //var posts = new PostsCollection();
             var posts = new PostModel();
-
             posts
                 .fetch()
                 .success(function(){

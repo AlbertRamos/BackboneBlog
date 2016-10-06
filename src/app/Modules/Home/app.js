@@ -5,6 +5,9 @@ define(function (require) {
 
 
     var app = Marionette.Application.extend({
+        regions: {
+            main: '#app'
+        },
         initialize: function(){
             console.log('app initialize');
         }

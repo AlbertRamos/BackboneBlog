@@ -7,11 +7,7 @@
 </head>
 <body>
 
-    <div id="app_header"></div>
-
-    <div id="app_main"></div>
-
-    <div id="app_footer"></div>
+    <div id="app"></div>
 
 
     <script id="header_template" type="text/template">
@@ -87,7 +83,7 @@
 
     <script id="post_template" type="text/template">
         <h2 class="post-title">
-            <a href="#post/<%= id %>">
+            <a href="#post/<%= slug %>">
             <%= title %>
             </a>
         </h2>

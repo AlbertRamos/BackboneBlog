@@ -18,7 +18,6 @@ define(function (require) {
         },
 
         loadPosts: function(){
-            console.log(this.model);
             var current_page = this.model.get('current_page');
             var self = this;
             this.model.fetch({ data: {
