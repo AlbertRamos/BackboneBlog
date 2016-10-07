@@ -1,5 +1,6 @@
 define(function (require) {
 
+    var loadGist = require('loadGist');
     var Backbone = require('backbone');
     var Marionette = require('marionette');
     var RootLayout = require('app/Views/DefaultLayout');

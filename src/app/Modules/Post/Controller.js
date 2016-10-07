@@ -53,6 +53,7 @@ define(function (require) {
             this.layout.main.show( this.postLayout );
             this.postLayout.post_info.show(postInfoView);
             this.postLayout.content.show(postContentView);
+            $('[data-gist]').gist();
         },
 
         show: function ( id ) {

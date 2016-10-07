@@ -13,7 +13,8 @@ requirejs.config({
         marionette: 'marionette.min',
         bootstrap: 'bootstrap',
         text: 'text',
-        config: 'config'
+        config: 'config',
+        loadGist: 'loadGist'
     },
 
     shim: {
@@ -33,11 +34,11 @@ requirejs.config({
         },
         'bootstrap': {
             deps: ['jquery']
+        },
+        'loadGist': {
+            deps: ['jquery']
         }
-
     }
 });
 
-// Start loading the main app file. Put all of
-// your application logic in there.
 requirejs(['app/app']);
