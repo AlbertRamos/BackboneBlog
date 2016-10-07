@@ -19,7 +19,7 @@
 |---------
 */
 header.intro-header {
-    background-image: url('/dist/img/pug_header.jpg');
+    background-image: url('/dist/img/albertramos.me_header_main_by_paula_vermeulen.jpg');
 }
 .site-heading h1 {
     background: rgba(255,255,255,.15);
@@ -27,6 +27,16 @@ header.intro-header {
     display: inline-block;
     padding: 25px 80px;
 }
+.header-credits {
+    background: rgba(255,255,255,0.5);
+    margin: 0;
+    padding: 2px 30px;
+    font-size: 12px;
+}
+.header-credits a {
+    text-decoration: underline;
+}
+
 
 /*
 |---------
