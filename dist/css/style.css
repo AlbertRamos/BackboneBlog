@@ -13,9 +13,8 @@
     color: #CACACA;
 }
 .navbar-brand {
-    background: rgba(255,255,255,.2);
     padding: 14px 15px !important;
-    color: #6f6f6f !important;
+    color: #d8d8d8 !important;
     text-shadow: none !important;
 }
 
